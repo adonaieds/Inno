@@ -28,3 +28,5 @@ data =
         }
     }
 }
+
+new Chart(CHART , data )
