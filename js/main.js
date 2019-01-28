@@ -3,17 +3,19 @@ let CHART = document.getElementById("lineChart");
 
 let data
 
+
+
 data =
 {
     type: 'pie',
     data:
     {
-        labels: ['1','2','3','4'],
+        labels: ['1','2'],
         datasets:[
             {
                 label : 'Points',
-                backgroundColor:['#f1c40f','#e67e22','#16a085','#2980b9'],
-                data : [10,20,55,30]
+                backgroundColor:['#01EDE1','#3F3F3F'],
+                data : [60,40]
 
 
             }
@@ -25,25 +27,32 @@ data =
         rotation:Math.PI* -0.5,
         animation:{
             animateScale: true
+        },
+        legend: {
+            display: false
         }
     }
 }
 
 new Chart(CHART , data )
 
-CHART = document.getElementById("lineChart1");
+
+
+
+let CHART1 = document.getElementById("lineChart1");
+// Chart.defaults.scale.ticks.beginAtZero = true;
 
 data =
 {
     type: 'pie',
     data:
     {
-        labels: ['1','2','3','4'],
+        labels: ['1','2'],
         datasets:[
             {
                 label : 'Points',
-                backgroundColor:['#f1c40f','#e67e22','#16a085','#2980b9'],
-                data : [50,30,10,10]
+                backgroundColor:['#01EDE1','#3F3F3F'],
+                data : [60,40]
 
 
             }
@@ -55,8 +64,11 @@ data =
         rotation:Math.PI* -0.5,
         animation:{
             animateScale: true
+        },
+        legend: {
+            display: false
         }
     }
 }
 
-new Chart(CHART , data )
+new Chart(CHART1 , data )
