@@ -1,4 +1,5 @@
 let CHART = document.getElementById("lineChart");
+
 // Chart.defaults.scale.ticks.beginAtZero = true;
 
 let data
@@ -7,12 +8,12 @@ data =
         type: 'pie',
         data:
         {
-            labels: ['1', '2'],
+            labels: [ '2','1'],
             datasets: [
                 {
                     label: 'Points',
                     backgroundColor: ['#01EDE1', '#3F3F3F'],
-                    data: [60, 40]
+                    data: ['60', '40']
                 }
             ]
         }
@@ -28,5 +29,15 @@ data =
             }
         }
     }
-
+    
 new Chart(CHART, data)
+
+
+function showLineChart1() {
+
+    
+}
+
+function showLineChart2() {
+
+}
