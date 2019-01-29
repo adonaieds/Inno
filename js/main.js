@@ -78,7 +78,7 @@ data =
                     text: '',
                     color: '', // Default is #000000
                     fontStyle: 'Arial', // Default is Arial
-                    sidePadding: 18 // Defualt is 20 (as a percentage)
+                    sidePadding: 16 // Defualt is 20 (as a percentage)
                 }
             }
         }
