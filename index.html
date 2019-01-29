@@ -40,35 +40,49 @@
 
         </div>
 
-        <div class="container1"  >
+        <div class="container1">
             <canvas id="lineChart" onclick="enableDetail1()"></canvas>
-            <canvas id="lineChart2" onclick="enableDetail2()" disabled="disabled" style="display: none;" ></canvas>
+            <canvas id="lineChart2" onclick="enableDetail2()" disabled="disabled" style="display: none;"></canvas>
             <script src="js/main.js"></script>
         </div>
-      
+
 
         <div class="container1">
             <div class="dev16">
                 <div class="per1">
-                    <p id="p11">10%</p>
+                    <p id="pp1">10%</p>
                 </div>
                 <div class="w3-light-grey" style="height: 24px;width: 100%;">
-                      
-                    <div class="w3-green" id="mama"></div>
+                    <div class="bar1" id="pb1"></div>
                 </div>
             </div>
             <div class="dev16">
                 <div class="per1">
-                    <p>60%</p>
+                    <p id="pp2">20%</p>
                 </div>
                 <div class="w3-light-grey" style="height: 24px;width: 100%;">
-                    <div class="w3-green" style="height:24px;width:25%"></div>
-                </div>
-                </div>
-                <div class="w3-light-grey" style="height: 24px;width: 100%;">
-                        <div class="w3-green" style="height:24px;width:60%"></div>
+                    <div class="bar2" id="pb2"></div>
                 </div>
             </div>
+
+            <div class="dev16">
+                <div class="per1">
+                    <p id="pp3">40%</p>
+                </div>
+                <div class="w3-light-grey" style="height: 24px;width: 100%;">
+                    <div class="bar3" id="pb3"></div>
+                </div>
+            </div>
+
+            <div class="dev16">
+                <div class="per1">
+                    <p id="pp4">80%</p>
+                </div>
+                <div class="w3-light-grey" style="height: 24px;width: 100%;">
+                    <div class="bar4" id="pb4"></div>
+                </div>
+            </div>
+
         </div>
 
         <!-- <div class="container1">
@@ -77,11 +91,10 @@
         </div> -->
 
     </section>
-    <button type="button" onclick="myFunction()">Change height and width of image</button>
 
     <section class="container">
         <div class="container1">
-        
+
         </div>
         <div class="container1" id="showDetail1" disabled="disabled" style="display: none;">
             <div class="dev16">
@@ -90,7 +103,7 @@
                 </div>
                 <div class="w3-light-grey" style="height: 24px;width: 100%;">
                     <div class="w3-green" style="height:24px;width:100%"></div>
-            </div>
+                </div>
             </div>
             <div class="dev16">
                 <div class="per1">
@@ -116,7 +129,7 @@
                 </div>
                 <div class="w3-light-grey" style="height: 24px;width: 100%;">
                     <div class="w3-green" style="height:24px;width:15%"></div>
-            </div>
+                </div>
             </div>
             <div class="dev16">
                 <div class="per1">
@@ -136,19 +149,16 @@
             </div>
         </div>
         <div class="container1">
-            
+
         </div>
     </section>
 
 </body>
 <script>
-    // function myFunction() {
-    var a = document.getElementById("p11").innerText
-//     document.getElementById("w3-green1").style.height = "300px";
-//   document.getElementById("w3-green1").style.width = "300px";
-    var w = document.getElementById("mama").setAttribute('style', 'height:24px;width:'+a+';')
-
-    // }
+    document.getElementById("pb1").setAttribute('style', 'height:24px;width:' + document.getElementById("pp1").innerText + ';')
+    document.getElementById("pb2").setAttribute('style', 'height:24px;width:' + document.getElementById("pp2").innerText + ';')
+    document.getElementById("pb3").setAttribute('style', 'height:24px;width:' + document.getElementById("pp3").innerText + ';')
+    document.getElementById("pb4").setAttribute('style', 'height:24px;width:' + document.getElementById("pp4").innerText + ';')
 </script>
 
 

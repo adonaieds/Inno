@@ -16,7 +16,7 @@ data =
             datasets: [
                 {
                     label: 'Points',
-                    backgroundColor: ['#01EDE1', '#3F3F3F'],
+                    backgroundColor: ['#00edd5', '#3F3F3F'],
                     data: ['60', '40']
                 }
             ]
@@ -44,7 +44,7 @@ let data2
                 datasets: [
                     {
                         label: 'Points',
-                        backgroundColor: ['#01EDE1', '#3F3F3F'],
+                        backgroundColor: ['#026afb', '#3F3F3F'],
                         data: ['20', '80']
                     }
                 ]
