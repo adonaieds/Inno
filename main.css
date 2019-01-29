@@ -71,9 +71,9 @@ body {
 }
 .dev15{
     display: grid;
-    grid-template-columns: auto;
-    align-self: center;
-    justify-self: center;
+    grid-template-columns: 50% auto;
+    /* align-self: center;
+    justify-self: center; */
 }
 .dev16{
     display: grid;
