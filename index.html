@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- <script src="csi.min.js"></script> -->
 </head>
 
 <body>
@@ -21,28 +23,35 @@
 
             <div class="dev15" id="name1" onclick="showLineChart1()">
                 <div class="cir1">
-                    <span>1</span>
+                    <p>1</p>
+                </div>
+                <div class="namepro1">
+                    <p>Wifi-PCEF</p>
+                </div>
+            </div>
+            <div class="dev15" id="name2" onclick="showLineChart2()">
+                <div class="cir1">
+                    <p>2</p>
                 </div>
                 <div class="namepro1">
                     <p>Wifi-PCEF</p>
                 </div>
             </div>
 
-
-            <div class="dev15" id="name2" onclick="showLineChart2()">
+            <div class="dev15" id="name2" onclick="showLineChart3()">
                 <div class="cir1">
-                    <p> 2</p>
+                    <p>3</p>
                 </div>
                 <div class="namepro1">
-                    <p>Wifi-PCEF</p>
+                    <p>KMS</p>
                 </div>
             </div>
 
         </div>
 
         <div class="container1">
-            <canvas id="lineChart" onclick="enableDetail1()"></canvas>
-            <canvas id="lineChart2" onclick="enableDetail2()" disabled="disabled" style="display: none;"></canvas>
+            <canvas id="lineChart" width="400" height="400" onclick="enableDetail1()"></canvas>
+            <!-- <canvas id="lineChart2" onclick="enableDetail2()" disabled="disabled" style="display: none;"></canvas> -->
             <script src="js/main.js"></script>
         </div>
 
@@ -91,7 +100,7 @@
         </div> -->
 
     </section>
-
+<br><br>
     <section class="container">
         <div class="container1">
 

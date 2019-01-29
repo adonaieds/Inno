@@ -1,23 +1,65 @@
 let CHART = document.getElementById("lineChart");
-let CHART2 = document.getElementById("lineChart2");
+var context = CHART.getContext('2d');
 
 let DETAIL1
 let DETAIL2
+
+Chart.pluginService.register({
+    beforeDraw: function (chart) {
+        if (chart.config.options.elements.center) {
+            //Get ctx from string
+            var ctx = chart.chart.ctx;
+
+            //Get options from the center object in options
+            var centerConfig = chart.config.options.elements.center;
+            var fontStyle = centerConfig.fontStyle || 'Arial';
+            var txt = centerConfig.text;
+            var color = centerConfig.color || '#000';
+            var sidePadding = centerConfig.sidePadding || 20;
+            var sidePaddingCalculated = (sidePadding / 100) * (chart.innerRadius * 2)
+            //Start with a base font of 30px
+            ctx.font = "30px " + fontStyle;
+
+            //Get the width of the string and also the width of the element minus 10 to give it 5px side padding
+            var stringWidth = ctx.measureText(txt).width;
+            var elementWidth = (chart.innerRadius * 2) - sidePaddingCalculated;
+
+            // Find out how much the font can grow in width.
+            var widthRatio = elementWidth / stringWidth;
+            var newFontSize = Math.floor(30 * widthRatio);
+            var elementHeight = (chart.innerRadius * 2);
+
+            // Pick a new font size so it will not be larger than the height of label.
+            var fontSizeToUse = Math.min(newFontSize, elementHeight);
+
+            //Set font settings to draw it correctly.
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            var centerX = ((chart.chartArea.left + chart.chartArea.right) / 2);
+            var centerY = ((chart.chartArea.top + chart.chartArea.bottom) / 2);
+            ctx.font = fontSizeToUse + "px " + fontStyle;
+            ctx.fillStyle = color;
+
+            //Draw text in center
+            ctx.fillText(txt, centerX, centerY);
+        }
+    }
+});
 
 // Chart.defaults.scale.ticks.beginAtZero = true;
 
 let data
 data =
     {
-        type: 'pie',
+        type: 'doughnut',
         data:
         {
-            labels: [ '2','1'],
+            labels: ['2', '1'],
             datasets: [
                 {
                     label: 'Points',
                     backgroundColor: ['#00edd5', '#3F3F3F'],
-                    data: ['60', '40']
+                    data: ['10', '40']
                 }
             ]
         }
@@ -30,43 +72,32 @@ data =
             },
             legend: {
                 display: false
+            },
+            elements: {
+                center: {
+                    text: '10%',
+                    color: '#00edd5', // Default is #000000
+                    fontStyle: 'Arial', // Default is Arial
+                    sidePadding: 20 // Defualt is 20 (as a percentage)
+                }
             }
         }
     }
 
-let data2
-    data2 =
-        {
-            type: 'pie',
-            data:
-            {
-                labels: [ '2','1'],
-                datasets: [
-                    {
-                        label: 'Points',
-                        backgroundColor: ['#026afb', '#3F3F3F'],
-                        data: ['20', '80']
-                    }
-                ]
-            }
-            ,
-            options: {
-                cutoutPercentage: 60,
-                rotation: Math.PI * -0.5,
-                animation: {
-                    animateScale: true
-                },
-                legend: {
-                    display: false
-                }
-            }
-        }
-
-        new Chart(CHART, data)
+new Chart(CHART, data)
 
 function showLineChart1() {
-    CHART.style.display = "block";
-    CHART2.style.display = "none";
+
+    // context.clear()
+
+    var color = ['#00edd5', '#3F3F3F'];
+    var datas = ['10', '90']
+    data.data.datasets[0].backgroundColor = color
+    data.data.datasets[0].data = datas
+    data.options.elements.center.text = datas[0] + '%'
+    data.options.elements.center.color = color[0]
+    // CHART.style.display = "block";
+    // CHART2.style.display = "none";
 
     DETAIL1 = document.getElementById("showDetail1");
     DETAIL2 = document.getElementById("showDetail2");
@@ -79,8 +110,15 @@ function showLineChart1() {
 }
 
 function showLineChart2() {
-    CHART.style.display = "none";
-    CHART2.style.display = "block";
+
+    // context.clear()
+
+    var color = ['#026afb', '#3F3F3F']
+    var datas = ['20', '80']
+    data.data.datasets[0].backgroundColor = color
+    data.data.datasets[0].data = datas
+    data.options.elements.center.text = datas[0] + '%'
+    data.options.elements.center.color = color[0]
 
     DETAIL1 = document.getElementById("showDetail1");
     DETAIL2 = document.getElementById("showDetail2");
@@ -88,21 +126,44 @@ function showLineChart2() {
     DETAIL1.style.display = "none";
     DETAIL2.style.display = "none";
 
-    new Chart(CHART2, data2)
+    new Chart(CHART, data)
+
+}
+
+function showLineChart3() {
+
+    // context.clear()
+
+    var color = ['#fe9003', '#3F3F3F']
+    var datas = [40, 60]
+    data.data.datasets[0].backgroundColor = color
+    data.data.datasets[0].data = datas
+    data.options.elements.center.text = datas[0] + '%'
+    data.options.elements.center.color = color[0]
+    // CHART.style.display = "none";
+    // CHART2.style.display = "block";
+
+    // DETAIL1 = document.getElementById("showDetail1");
+    // DETAIL2 = document.getElementById("showDetail2");
+
+    // DETAIL1.style.display = "none";
+    // DETAIL2.style.display = "none";
+
+    new Chart(CHART, data)
 
 }
 
 
 
-function enableDetail1(){
+function enableDetail1() {
     DETAIL1 = document.getElementById("showDetail1");
     DETAIL2 = document.getElementById("showDetail2");
     DETAIL1.style.display = "block";
     // DETAIL2.style.display = "none";
-    
+
 }
 
-function enableDetail2(){
+function enableDetail2() {
     DETAIL1 = document.getElementById("showDetail1");
     DETAIL2 = document.getElementById("showDetail2");
     // DETAIL1.style.display = "none";
