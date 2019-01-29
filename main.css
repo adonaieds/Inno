@@ -62,7 +62,13 @@ body {
     /* grid-gap: 1px; */
 }
 
-
+.barDeatil{
+    display: grid;
+    width: 100%;
+    height: 60%;
+    justify-content: center; 
+     text-align: center;
+}
 .dev15{
     display: grid;
     grid-template-columns: 200px auto;
@@ -75,7 +81,6 @@ body {
     /* align-self: center;
     justify-self: center; */
 }
-
 .cir1{
     align-self: center;
     justify-self: center;

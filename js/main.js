@@ -1,6 +1,9 @@
 let CHART = document.getElementById("lineChart");
 let DETAIL = document.getElementById("showDetail");
 
+var color = ['#00edd5', '#3F3F3F'];
+var datas = ['10', '90']
+
 Chart.pluginService.register({
     beforeDraw: function (chart) {
         if (chart.config.options.elements.center) {
@@ -81,14 +84,14 @@ data =
         }
     }
 
-var color = ['#00edd5', '#3F3F3F'];
-var datas = ['10', '90']
+
 data.data.datasets[0].backgroundColor = color
 data.data.datasets[0].data = datas
 data.options.elements.center.text = datas[0] + '%'
 data.options.elements.center.color = color[0]
 
 DETAIL.style.display = "none";
+// DETAIL.style.setProperty('padding-top', '10px');
 
 var chart = new Chart(CHART, data)
 
@@ -96,8 +99,8 @@ function showLineChart1() {
 
     // context.clearRect(0, 0, CHART.width, CHART.height)
 
-    var color = ['#00edd5', '#3F3F3F'];
-    var datas = ['10', '90']
+    color = ['#00edd5', '#3F3F3F'];
+    datas = ['10', '90']
     data.data.datasets[0].backgroundColor = color
     data.data.datasets[0].data = datas
     data.options.elements.center.text = datas[0] + '%'
@@ -105,7 +108,10 @@ function showLineChart1() {
     // CHART.style.display = "block";
     // CHART2.style.display = "none";
 
-    DETAIL.style.display = "none";
+    DETAIL.style['display'] = "none";
+
+    // .setAttribute("style", "background-color: red;");
+    // DETAIL.setAttribute ('style') = "display:none;";
 
     // new Chart(CHART, data)
     chart.update()
@@ -116,8 +122,8 @@ function showLineChart2() {
 
     // context.clearRect(0, 0, CHART.width, CHART.height)
 
-    var color = ['#026afb', '#3F3F3F']
-    var datas = ['20', '80']
+    color = ['#026afb', '#3F3F3F']
+    datas = ['20', '80']
     data.data.datasets[0].backgroundColor = color
     data.data.datasets[0].data = datas
     data.options.elements.center.text = datas[0] + '%'
@@ -135,8 +141,8 @@ function showLineChart3() {
 
     // context.clearRect(0, 0, CHART.width, CHART.height)
 
-    var color = ['#fe9003', '#3F3F3F']
-    var datas = [40, 60]
+    color = ['#fe9003', '#3F3F3F']
+    datas = [40, 60]
     data.data.datasets[0].backgroundColor = color
     data.data.datasets[0].data = datas
     data.options.elements.center.text = datas[0] + '%'
@@ -153,8 +159,8 @@ function showLineChart4() {
 
     // context.clearRect(0, 0, CHART.width, CHART.height)
 
-    var color = ['#8c7acc', '#3F3F3F']
-    var datas = [80, 20]
+    color = ['#8c7acc', '#3F3F3F']
+    datas = [80, 20]
     data.data.datasets[0].backgroundColor = color
     data.data.datasets[0].data = datas
     data.options.elements.center.text = datas[0] + '%'
@@ -169,15 +175,41 @@ function showLineChart4() {
 
 
 
-function enableDetail1() {
+function enableDetail() {
 
-    // DETAIL.style.display = "block";
-    // DETAIL2.style.display = "none";
+    // DETAIL.style.setAttribute ('display') = "block";
+    DETAIL.style = "display:block;grid-template-columns: 300px;display: grid;";
 
-}
+    let condition = datas[0]
+    let a, b, c
 
-function enableDetail2() {
+    if (condition === '10') {
+        a = 10
+        b = 10
+        c = 10
+    }
+    else if (condition === '20') {
+        a = 20
+        b = 20
+        c = 20
+    }
+    else if (condition === '40') {
+        a = 40
+        b = 40
+        c = 40
+    }
+    else {
+        a = 80
+        b = 80
+        c = 80
+    }
 
-    // DETAIL1.style.display = "none";
-    // DETAIL.style.display = "block";
+    // style="height:24px;width:30%"
+    document.getElementById("b1").setAttribute('style', 'height:24px;width:' + a + '%;')
+    document.getElementById("b2").setAttribute('style', 'height:24px;width:' + b + '%;')
+    document.getElementById("b3").setAttribute('style', 'height:24px;width:' + c + '%;')
+
+    document.getElementById("b1").innerText = a + '%'
+    document.getElementById("b2").innerText = b + '%'
+    document.getElementById("b3").innerText = c + '%'
 }
