@@ -1,8 +1,5 @@
 let CHART = document.getElementById("lineChart");
-var context = CHART.getContext('2d');
-
-let DETAIL1
-let DETAIL2
+let DETAIL = document.getElementById("showDetail");
 
 Chart.pluginService.register({
     beforeDraw: function (chart) {
@@ -91,6 +88,8 @@ data.data.datasets[0].data = datas
 data.options.elements.center.text = datas[0] + '%'
 data.options.elements.center.color = color[0]
 
+DETAIL.style.display = "none";
+
 var chart = new Chart(CHART, data)
 
 function showLineChart1() {
@@ -106,11 +105,7 @@ function showLineChart1() {
     // CHART.style.display = "block";
     // CHART2.style.display = "none";
 
-    DETAIL1 = document.getElementById("showDetail1");
-    DETAIL2 = document.getElementById("showDetail2");
-
-    DETAIL1.style.display = "none";
-    DETAIL2.style.display = "none";
+    DETAIL.style.display = "none";
 
     // new Chart(CHART, data)
     chart.update()
@@ -128,11 +123,8 @@ function showLineChart2() {
     data.options.elements.center.text = datas[0] + '%'
     data.options.elements.center.color = color[0]
 
-    DETAIL1 = document.getElementById("showDetail1");
-    DETAIL2 = document.getElementById("showDetail2");
 
-    DETAIL1.style.display = "none";
-    DETAIL2.style.display = "none";
+    DETAIL.style.display = "none";
 
     chart.update()
     // new Chart(CHART, data)
@@ -150,6 +142,8 @@ function showLineChart3() {
     data.options.elements.center.text = datas[0] + '%'
     data.options.elements.center.color = color[0]
 
+    DETAIL.style.display = "none";
+
     chart.update()
 
 
@@ -166,6 +160,8 @@ function showLineChart4() {
     data.options.elements.center.text = datas[0] + '%'
     data.options.elements.center.color = color[0]
 
+    DETAIL.style.display = "none";
+
     chart.update()
 
 
@@ -174,16 +170,14 @@ function showLineChart4() {
 
 
 function enableDetail1() {
-    DETAIL1 = document.getElementById("showDetail1");
-    DETAIL2 = document.getElementById("showDetail2");
-    DETAIL1.style.display = "block";
+
+    // DETAIL.style.display = "block";
     // DETAIL2.style.display = "none";
 
 }
 
 function enableDetail2() {
-    DETAIL1 = document.getElementById("showDetail1");
-    DETAIL2 = document.getElementById("showDetail2");
+
     // DETAIL1.style.display = "none";
-    DETAIL2.style.display = "block";
+    // DETAIL.style.display = "block";
 }

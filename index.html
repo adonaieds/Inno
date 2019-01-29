@@ -51,9 +51,9 @@
         </div>
 
         <div class="container1">
-            <canvas id="lineChart" width="350" height="350" onclick="enableDetail1()"></canvas>
+            <canvas id="lineChart"  height="260" onclick="enableDetail1()"></canvas>
             <!-- <canvas id="lineChart2" onclick="enableDetail2()" disabled="disabled" style="display: none;"></canvas> -->
-            <script src="js/main.js"></script>
+          
         </div>
 
 
@@ -103,66 +103,37 @@
     </section>
 <br><br>
     <section class="container">
-        <div class="container1">
-
-        </div>
-        <div class="container1" id="showDetail1" disabled="disabled" style="display: none;">
-            <div class="dev16">
-                <div class="per1">
-                    <p>System Analysis</p>
-                </div>
-                <div class="w3-light-grey" style="height: 24px;width: 100%;">
-                    <div class="w3-green" style="height:24px;width:100%"></div>
-                </div>
+        <div class="container2">
+            <div class="barDeatil" id="showDetail">
+                    <div class="dev16">
+                            <div class="per1">
+                                <p>System Analysis</p>
+                            </div>
+                            <div class="w3-light-grey" style="height: 24px;width: 100%;">
+                                <div class="w3-green" style="height:24px;width:100%"></div>
+                            </div>
+                        </div>
+                        <div class="dev16">
+                            <div class="per1">
+                                <p>Programemer</p>
+                            </div>
+                            <div class="w3-light-grey" style="height: 24px;width: 100%;">
+                                <div class="w3-green" style="height:24px;width:50%"></div>
+                            </div>
+                        </div>
+                        <div class="dev16">
+                            <div class="per1">
+                                <p>Quality Assurance</p>
+                            </div>
+                            <div class="w3-light-grey" style="height: 24px;width: 100%;">
+                                <div class="w3-green" style="height:24px;width:30%"></div>
+                            </div>
+                        </div>
             </div>
-            <div class="dev16">
-                <div class="per1">
-                    <p>Programemer</p>
-                </div>
-                <div class="w3-light-grey" style="height: 24px;width: 100%;">
-                    <div class="w3-green" style="height:24px;width:50%"></div>
-                </div>
-            </div>
-            <div class="dev16">
-                <div class="per1">
-                    <p>Quality Assurance</p>
-                </div>
-                <div class="w3-light-grey" style="height: 24px;width: 100%;">
-                    <div class="w3-green" style="height:24px;width:30%"></div>
-                </div>
-            </div>
-        </div>
-        <div class="container1" id="showDetail2" disabled="disabled" style="display: none;">
-            <div class="dev16">
-                <div class="per1">
-                    <p>System Analysis</p>
-                </div>
-                <div class="w3-light-grey" style="height: 24px;width: 100%;">
-                    <div class="w3-green" style="height:24px;width:15%"></div>
-                </div>
-            </div>
-            <div class="dev16">
-                <div class="per1">
-                    <p>Programemer</p>
-                </div>
-                <div class="w3-light-grey" style="height: 24px;width: 100%;">
-                    <div class="w3-green" style="height:24px;width:5%"></div>
-                </div>
-            </div>
-            <div class="dev16">
-                <div class="per1">
-                    <p>Quality Assurance</p>
-                </div>
-                <div class="w3-light-grey" style="height: 24px;width: 100%;">
-                    <div class="w3-green" style="height:24px;width:0%"></div>
-                </div>
-            </div>
-        </div>
-        <div class="container1">
 
         </div>
     </section>
-
+    <script src="js/main.js"></script>
 </body>
 <script>
     document.getElementById("pb1").setAttribute('style', 'height:24px;width:' + document.getElementById("pp1").innerText + ';')
