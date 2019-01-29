@@ -54,12 +54,12 @@ data =
         type: 'doughnut',
         data:
         {
-            labels: ['2', '1'],
+            labels: ['1', '2'],
             datasets: [
                 {
                     label: 'Points',
-                    backgroundColor: ['#00edd5', '#3F3F3F'],
-                    data: ['10', '40']
+                    backgroundColor: [],
+                    data: []
                 }
             ]
         }
@@ -75,20 +75,27 @@ data =
             },
             elements: {
                 center: {
-                    text: '10%',
-                    color: '#00edd5', // Default is #000000
+                    text: '',
+                    color: '', // Default is #000000
                     fontStyle: 'Arial', // Default is Arial
-                    sidePadding: 20 // Defualt is 20 (as a percentage)
+                    sidePadding: 18 // Defualt is 20 (as a percentage)
                 }
             }
         }
     }
 
-new Chart(CHART, data)
+var color = ['#00edd5', '#3F3F3F'];
+var datas = ['10', '90']
+data.data.datasets[0].backgroundColor = color
+data.data.datasets[0].data = datas
+data.options.elements.center.text = datas[0] + '%'
+data.options.elements.center.color = color[0]
+
+var chart = new Chart(CHART, data)
 
 function showLineChart1() {
 
-    // context.clear()
+    // context.clearRect(0, 0, CHART.width, CHART.height)
 
     var color = ['#00edd5', '#3F3F3F'];
     var datas = ['10', '90']
@@ -105,13 +112,14 @@ function showLineChart1() {
     DETAIL1.style.display = "none";
     DETAIL2.style.display = "none";
 
-    new Chart(CHART, data)
+    // new Chart(CHART, data)
+    chart.update()
 
 }
 
 function showLineChart2() {
 
-    // context.clear()
+    // context.clearRect(0, 0, CHART.width, CHART.height)
 
     var color = ['#026afb', '#3F3F3F']
     var datas = ['20', '80']
@@ -126,13 +134,14 @@ function showLineChart2() {
     DETAIL1.style.display = "none";
     DETAIL2.style.display = "none";
 
-    new Chart(CHART, data)
+    chart.update()
+    // new Chart(CHART, data)
 
 }
 
 function showLineChart3() {
 
-    // context.clear()
+    // context.clearRect(0, 0, CHART.width, CHART.height)
 
     var color = ['#fe9003', '#3F3F3F']
     var datas = [40, 60]
@@ -140,16 +149,25 @@ function showLineChart3() {
     data.data.datasets[0].data = datas
     data.options.elements.center.text = datas[0] + '%'
     data.options.elements.center.color = color[0]
-    // CHART.style.display = "none";
-    // CHART2.style.display = "block";
 
-    // DETAIL1 = document.getElementById("showDetail1");
-    // DETAIL2 = document.getElementById("showDetail2");
+    chart.update()
 
-    // DETAIL1.style.display = "none";
-    // DETAIL2.style.display = "none";
 
-    new Chart(CHART, data)
+}
+
+function showLineChart4() {
+
+    // context.clearRect(0, 0, CHART.width, CHART.height)
+
+    var color = ['#8c7acc', '#3F3F3F']
+    var datas = [80, 20]
+    data.data.datasets[0].backgroundColor = color
+    data.data.datasets[0].data = datas
+    data.options.elements.center.text = datas[0] + '%'
+    data.options.elements.center.color = color[0]
+
+    chart.update()
+
 
 }
 

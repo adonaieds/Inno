@@ -53,7 +53,7 @@ body {
 
 .dev15{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 200px auto;
     /* align-self: center;
     justify-self: center; */
 }
@@ -101,7 +101,7 @@ body {
 
 .namepro1{
     align-self: center;
-    justify-self: center;
+    justify-self: left;
 }
 .article {
     position: relative;
