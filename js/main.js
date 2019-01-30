@@ -84,16 +84,9 @@ data =
         }
     }
 
-
-data.data.datasets[0].backgroundColor = color
-data.data.datasets[0].data = datas
-data.options.elements.center.text = datas[0] + '%'
-data.options.elements.center.color = color[0]
-
-DETAIL.style.display = "none";
-// DETAIL.style.setProperty('padding-top', '10px');
-
 var chart = new Chart(CHART, data)
+
+showLineChart1()
 
 function showLineChart1() {
 
