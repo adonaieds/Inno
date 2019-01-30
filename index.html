@@ -16,34 +16,42 @@
 <body>
 
     <section name="header" class="test1">
-        <header class="header1">Entronica BackEnd</header>
+        <header class="header1">Project Progress</header>
     </section>
 
     <section class="container">
         <div class="container1">
 
             <div class="dev15" id="name1" onclick="showLineChart1()">
-                <div class="cir1"></div>
+                <div class="cir1">
+                    <canvas style="height: 100%; width: 70%; background:#00edd5;"></canvas>
+                </div>
                 <div class="namepro1">
                     <p>Wifi-PCEF</p>
                 </div>
             </div>
             <div class="dev15" id="name2" onclick="showLineChart2()">
-                <div class="cir1"></div>
+                <div class="cir1">
+                    <canvas style="height: 100%; width: 70%; background:#026afb;"></canvas>
+                </div>
                 <div class="namepro1">
                     <p>PCEF</p>
                 </div>
             </div>
 
             <div class="dev15" id="name2" onclick="showLineChart3()">
-                <div class="cir1"></div>
+                <div class="cir1">
+                    <canvas style="height: 100%; width: 70%; background:#fe9003;"></canvas>
+                </div>
                 <div class="namepro1">
                     <p>KMS</p>
                 </div>
             </div>
 
             <div class="dev15" id="name2" onclick="showLineChart4()">
-                <div class="cir1"></div>
+                <div class="cir1">
+                    <canvas style="height: 100%; width: 70%; background:#8c7acc;"></canvas>
+                </div>
                 <div class="namepro1">
                     <p>I-WTCF</p>
                 </div>
@@ -52,7 +60,10 @@
         </div>
 
         <div class="container1">
+
             <canvas id="lineChart" height="260" onclick="enableDetail()"></canvas>
+            <!-- <canvas id="lineChart"  style="height: 100%;width: 100%;" onclick="enableDetail()"></canvas> -->
+
             <!-- <canvas id="lineChart2" onclick="enableDetail2()" disabled="disabled" style="display: none;"></canvas> -->
 
         </div>
