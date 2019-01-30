@@ -84,7 +84,9 @@ body {
 .cir1{
     align-self: center;
     justify-self: center;
+    padding: 0 0 0 50%;
 }
+
 .cir1 span{
     padding: 50% 70% 30% 50%;
     background-color: aqua;
