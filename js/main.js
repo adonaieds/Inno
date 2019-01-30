@@ -84,16 +84,9 @@ data =
         }
     }
 
-
-data.data.datasets[0].backgroundColor = color
-data.data.datasets[0].data = datas
-data.options.elements.center.text = datas[0] + '%'
-data.options.elements.center.color = color[0]
-
-DETAIL.style.display = "none";
-// DETAIL.style.setProperty('padding-top', '10px');
-
 var chart = new Chart(CHART, data)
+
+showLineChart1()
 
 function showLineChart1() {
 
@@ -142,7 +135,7 @@ function showLineChart3() {
     // context.clearRect(0, 0, CHART.width, CHART.height)
 
     color = ['#fe9003', '#3F3F3F']
-    datas = [40, 60]
+    datas = ['40', '60']
     data.data.datasets[0].backgroundColor = color
     data.data.datasets[0].data = datas
     data.options.elements.center.text = datas[0] + '%'
@@ -160,7 +153,7 @@ function showLineChart4() {
     // context.clearRect(0, 0, CHART.width, CHART.height)
 
     color = ['#8c7acc', '#3F3F3F']
-    datas = [80, 20]
+    datas = ['80', '20']
     data.data.datasets[0].backgroundColor = color
     data.data.datasets[0].data = datas
     data.options.elements.center.text = datas[0] + '%'
@@ -184,24 +177,24 @@ function enableDetail() {
     let a, b, c
 
     if (condition === '10') {
-        a = 10
-        b = 10
-        c = 10
+        a = 6
+        b = 3
+        c = 1
     }
     else if (condition === '20') {
-        a = 20
-        b = 20
-        c = 20
+        a = 15
+        b = 4
+        c = 1
     }
     else if (condition === '40') {
-        a = 40
-        b = 40
-        c = 40
+        a = 30
+        b = 10
+        c = 0
     }
     else {
-        a = 80
-        b = 80
-        c = 80
+        a = 50
+        b = 20
+        c = 10
     }
 
     // style="height:24px;width:30%"
