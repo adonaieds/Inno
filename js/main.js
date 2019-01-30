@@ -96,7 +96,7 @@ function showLineChart1() {
     // context.clearRect(0, 0, CHART.width, CHART.height)
 
     color = ['#00edd5', '#3F3F3F'];
-    datas = ['10', '90']
+    datas = ['80', '20']
     data.data.datasets[0].backgroundColor = color
     data.data.datasets[0].data = datas
     data.options.elements.center.text = datas[0] + '%'
@@ -123,7 +123,7 @@ function showLineChart2() {
     // context.clearRect(0, 0, CHART.width, CHART.height)
 
     color = ['#026afb', '#3F3F3F']
-    datas = ['20', '80']
+    datas = ['30', '70']
     data.data.datasets[0].backgroundColor = color
     data.data.datasets[0].data = datas
     data.options.elements.center.text = datas[0] + '%'
@@ -163,7 +163,7 @@ function showLineChart4() {
     // context.clearRect(0, 0, CHART.width, CHART.height)
 
     color = ['#8c7acc', '#3F3F3F']
-    datas = ['80', '20']
+    datas = ['90', '10']
     data.data.datasets[0].backgroundColor = color
     data.data.datasets[0].data = datas
     data.options.elements.center.text = datas[0] + '%'
@@ -196,10 +196,10 @@ function enableDetail() {
         b = 3
         c = 1
     }
-    else if (condition === '20') {
+    else if (condition === '30') {
         a = 15
-        b = 4
-        c = 1
+        b = 10
+        c = 5
     }
     else if (condition === '40') {
         a = 30
@@ -208,8 +208,8 @@ function enableDetail() {
     }
     else {
         a = 50
-        b = 20
-        c = 10
+        b = 25
+        c = 15
     }
 
     // style="height:24px;width:30%"
