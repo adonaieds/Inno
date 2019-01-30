@@ -50,13 +50,24 @@ body {
     /* text-align: center; */
     /* grid-gap: 1px; */
 }
+.container11 {
+    /* display: grid; */
+    grid-column: 300px;
+    /* grid-template-columns: auto; */
+    /* grid-template-rows: auto; */
+    margin: 0px 10px;
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* grid-gap: 1px; */
+}
+
 
 .container2 {
     display: grid;
-    grid-column: 1 / span 3;
+    grid-column: 300px;
     /* grid-template-columns: auto;
     grid-template-rows: auto; */
-    margin: 0px 10px;
+    /* margin: 0px 10px; */
     /* justify-content: center; */
     /* text-align: center; */
     /* grid-gap: 1px; */
@@ -64,10 +75,10 @@ body {
 
 .barDeatil{
     display: grid;
-    width: 100%;
-    height: 60%;
-    justify-content: center; 
-     text-align: center;
+    /* width: 100%; */
+    /* height: 60%; */
+    /* justify-content: center;  */
+     /* text-align: center; */
 }
 .dev15{
     display: grid;
@@ -96,6 +107,13 @@ body {
     align-self: flex-end;
  
     /* flex-grow: 1; */
+}
+.ps1{
+    text-align: left;
+}
+.ps1 p{
+     font-size:  50px;
+
 }
 .bar1{
     background-color :#00edd5

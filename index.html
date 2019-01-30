@@ -8,7 +8,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <!-- <script src="csi.min.js"></script> -->
 </head>
 
@@ -51,9 +52,9 @@
         </div>
 
         <div class="container1">
-            <canvas id="lineChart"  height="260" onclick="enableDetail()"></canvas>
+            <canvas id="lineChart" height="260" onclick="enableDetail()"></canvas>
             <!-- <canvas id="lineChart2" onclick="enableDetail2()" disabled="disabled" style="display: none;"></canvas> -->
-          
+
         </div>
 
 
@@ -101,37 +102,46 @@
         </div> -->
 
     </section>
-<br><br>
+    <br><br>
     <section class="container">
-        <div class="container2">
-            <div class="barDeatil" id="showDetail">
-                    <div class="dev17">
-                            <div class="per1">
-                                <p>System Analysis</p>
-                            </div>
-                            <div class="w3-light-grey" style="height: 24px;width: 100%;">
-                                <div class="w3-green" id="b1" style="height:24px;width:100%"></div>
-                            </div>
-                        </div>
-                        <div class="dev17">
-                            <div class="per1">
-                                <p>Programemer</p>
-                            </div>
-                            <div class="w3-light-grey" style="height: 24px;width: 100%;">
-                                <div class="w3-green" id="b2" ></div>
-                            </div>
-                        </div>
-                        <div class="dev17">
-                            <div class="per1">
-                                <p>Quality Assurance</p>
-                            </div>
-                            <div class="w3-light-grey" style="height: 24px;width: 100%;">
-                                <div class="w3-green" id="b3"></div>
-                            </div>
-                        </div>
-            </div>
 
+        <!-- <div class="barDeatil" id="showDetail"> -->
+
+        <div class="container11" id="showDetail1">
+            <div class="ps1">
+                <p id=ps1></p>
+            </div>
+            <div class="w3-light-grey" style="height: 24px;width: 100%;">
+                <div class="w3-green" id="b1" style="height:24px;width:100%"></div>
+            </div>
+            <div class="per1">
+                <p>System Analysis</p>
+            </div>
         </div>
+        <div class="container11" id="showDetail2">
+                <div class="ps1">
+                        <p id=ps2></p>
+                    </div>
+            <div class="w3-light-grey" style="height: 24px;width: 100%;">
+                <div class="w3-green" id="b2"></div>
+            </div>
+            <div class="per1">
+                <p>Programemer</p>
+            </div>
+        </div>
+        <div class="container11" id="showDetail3">
+                <div class="ps1">
+                        <p id=ps3></p>
+                    </div>
+            <div class="w3-light-grey" style="height: 24px;width: 100%;">
+                <div class="w3-green" id="b3"></div>
+            </div>
+            <div class="per1">
+                <p>Quality Assurance</p>
+            </div>
+        </div>
+
+        <!-- </div> -->
     </section>
     <script src="js/main.js"></script>
 </body>

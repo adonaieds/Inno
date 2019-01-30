@@ -1,5 +1,8 @@
 let CHART = document.getElementById("lineChart");
-let DETAIL = document.getElementById("showDetail");
+let DETAIL1 = document.getElementById("showDetail1");
+let DETAIL2 = document.getElementById("showDetail2");
+let DETAIL3 = document.getElementById("showDetail3");
+
 
 var color = ['#00edd5', '#3F3F3F'];
 var datas = ['10', '90']
@@ -101,7 +104,11 @@ function showLineChart1() {
     // CHART.style.display = "block";
     // CHART2.style.display = "none";
 
-    DETAIL.style['display'] = "none";
+    // DETAIL.style['display'] = "none";
+
+    DETAIL1.style.display = "none";
+    DETAIL2.style.display = "none";
+    DETAIL3.style.display = "none";
 
     // .setAttribute("style", "background-color: red;");
     // DETAIL.setAttribute ('style') = "display:none;";
@@ -122,8 +129,9 @@ function showLineChart2() {
     data.options.elements.center.text = datas[0] + '%'
     data.options.elements.center.color = color[0]
 
-
-    DETAIL.style.display = "none";
+    DETAIL1.style.display = "none";
+    DETAIL2.style.display = "none";
+    DETAIL3.style.display = "none";
 
     chart.update()
     // new Chart(CHART, data)
@@ -141,7 +149,9 @@ function showLineChart3() {
     data.options.elements.center.text = datas[0] + '%'
     data.options.elements.center.color = color[0]
 
-    DETAIL.style.display = "none";
+    DETAIL1.style.display = "none";
+    DETAIL2.style.display = "none";
+    DETAIL3.style.display = "none";
 
     chart.update()
 
@@ -159,7 +169,9 @@ function showLineChart4() {
     data.options.elements.center.text = datas[0] + '%'
     data.options.elements.center.color = color[0]
 
-    DETAIL.style.display = "none";
+    DETAIL1.style.display = "none";
+    DETAIL2.style.display = "none";
+    DETAIL3.style.display = "none";
 
     chart.update()
 
@@ -171,7 +183,10 @@ function showLineChart4() {
 function enableDetail() {
 
     // DETAIL.style.setAttribute ('display') = "block";
-    DETAIL.style = "display:block;grid-template-columns: 300px;display: grid;";
+    // DETAIL.style = "display:block;grid-template-columns: 300px;display: grid;";
+    DETAIL1.style = "display: grid;display:block;justify-content: center;margin: 0px 10px;grid-template-columns: 200px;";
+    DETAIL2.style = "display: grid;display:block;justify-content: center;margin: 0px 10px;grid-template-columns: 200px;";
+    DETAIL3.style = "display: grid;display:block;justify-content: center;margin: 0px 10px;grid-template-columns: 200px;";
 
     let condition = datas[0]
     let a, b, c
@@ -202,7 +217,7 @@ function enableDetail() {
     document.getElementById("b2").setAttribute('style', 'height:24px;width:' + b + '%;')
     document.getElementById("b3").setAttribute('style', 'height:24px;width:' + c + '%;')
 
-    document.getElementById("b1").innerText = a + '%'
-    document.getElementById("b2").innerText = b + '%'
-    document.getElementById("b3").innerText = c + '%'
+    document.getElementById("ps1").innerText = a + '%'
+    document.getElementById("ps2").innerText = b + '%'
+    document.getElementById("ps3").innerText = c + '%'
 }
